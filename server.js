@@ -6,19 +6,8 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', function(req, res) {
-    res.send('Servidor Iniciado')
+require('./api/router.js')(app);
+
+app.listen(3500, function(){
+    console.log('servidor corriendo en el puerto 3.500')
 });
-
-
-app.get('/estudiantes', function(req, res) {
-    res.send('Hay 23 estudiantes')
-});
-
-app.get('/tutor', function(req, res) {
-    res.send('En clase hay 1 tutor')
-});
-
-app.listen(3000, function(){
-    console.log('servidor corriendo en el puerto 3.000')
-})
