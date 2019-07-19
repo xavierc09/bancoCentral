@@ -7,10 +7,10 @@ class DB {
             DB.instancia = this;
             //Agregamos los parametros de conexion
             this.connection = mysql.createConnection({
-                host     : '127.0.0.1',
-                user     : 'FULLSTACK',
-                password : 'FULLSTACK',
-                database : 'flexcube'
+                host     : 'node49749-env-9383255.atl.jelastic.vps-host.net',
+                user     : 'root',
+                password : 'TFYsaa10408',
+                database : 'node_mysql'
             });
             //conectamos y manejamos la conexion con throw
             this.connection.connect((err) => {
